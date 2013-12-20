@@ -1,16 +1,8 @@
-export PATH="$PATH:/sbin/:/usr/sbin/:/opt/bin:/opt/sbin"
-export PATH="$PATH:/home/matt/ec2-api-tools/bin:/home/matt/ec2-ami-tools/bin:/home/matt/Scripts";
-export RUBYLIB="/etc/puppet/modules/cloud_provisioner/lib/:$RUBYLIB"
-
-alias s='/home/matt/ssh.sh'
-alias v='/home/matt/Scripts/vpc_ssh.rb'
-alias pdiff='diff -x *~ -r . ../play4free'
-
 # disable annoying terminal locking
 stty -ixon
 
+# prompt
+export PS1="\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\\n$ "
+
 # aws auto completion http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html
 complete -C aws_completer aws
-
-. /home/matt/prompt
-. ~/aws.env
